@@ -1,13 +1,6 @@
 import  reverse_linked_list_solution as solution
 
 
-def linked_list_to_string(ll):
-    while ll:
-        print(ll.value, '--> ', end='')
-        ll = ll.next
-    print('None')
-
-
 def linked_list_from_list(l):
     head = solution.LinkedList(l[0])
     ll = head
@@ -36,6 +29,6 @@ if __name__ == '__main__':
             linked_list_from_list(['e', 'd', 'c', 'b', 'a']),
         ),
     ]
-    
+
     for input, expected in tests:
         assert solution.reverseLinkedList(input) == expected
