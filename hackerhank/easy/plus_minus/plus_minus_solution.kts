@@ -17,5 +17,4 @@ fun main() {
     assert(actual == expected)
 }
 
-// install kotlinc and then run: kotlinc -J-ea -script plus_minus_solution.kts
 main()
