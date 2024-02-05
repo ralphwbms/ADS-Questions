@@ -13,7 +13,7 @@ fun plusMinus(arr: List<Int>): List<String> {
 
 fun main() {
     val given = listOf(0, 4, -3, 3, -6)
-    val expected = listOf("0.400000", "0.400000", "0.200001")
+    val expected = listOf("0.400000", "0.400000", "0.200000")
     val actual = plusMinus(given)
     assert(actual == expected)
 }
