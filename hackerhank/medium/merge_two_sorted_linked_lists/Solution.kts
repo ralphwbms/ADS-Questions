@@ -22,41 +22,34 @@ class SinglyLinkedListNode(val data: Int) {
 }
 
 object IterativeSolution {
+    // O(n) time | O(1) space
     fun mergeLists(hA: SinglyLinkedListNode?, hB: SinglyLinkedListNode?): SinglyLinkedListNode? {
         if (hA == null) return hB
         if (hB == null) return hA
         
         var nextA = hA
         var nextB = hB
-        var mergedH = SinglyLinkedListNode(0)
-        var mergedN = mergedH
+        var header = SinglyLinkedListNode(0)
+        var current = header
         
-        while (nextA != null || nextB != null) {
-            
-        if (nextA == null) {
-            mergedN.next = nextB
-            mergedN = mergedN.next!!
-            break      
-        }
-
-        if (nextB == null) {
-            mergedN.next = nextA
-            mergedN = mergedN.next!!
-            break      
-        }
-
-        if (nextA.data <= nextB.data) {
-            mergedN.next = nextA
-            mergedN = mergedN.next!!
-            nextA = nextA.next
-        } else {
-            mergedN.next = nextB
-            mergedN = mergedN.next!!
-            nextB = nextB.next
+        while (nextA != null && nextB != null) {
+            if (nextA.data <= nextB.data) {
+                current.next = nextA
+                current = current.next!!
+                nextA = nextA.next
+            } else {
+                current.next = nextB
+                current = current.next!!
+                nextB = nextB.next
             }
         }
 
-        return mergedH.next
+        if (nextA == null)
+            current.next = nextB
+        else
+            current.next = nextA
+
+        return header.next
     }
 }
 
@@ -97,7 +90,7 @@ fun main() {
             current2 = current2.next!!
         }
 
-        val result = RecursiveSolution.mergeLists(head1, head2)
+        val result = IterativeSolution.mergeLists(head1, head2)
         println(result)
     }
 }
