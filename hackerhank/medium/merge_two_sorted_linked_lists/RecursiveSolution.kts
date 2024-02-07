@@ -60,6 +60,3 @@ fun main() {
         println(result)
     }
 }
-
-// install kotlin and then run: kotlin solution.kts
-// main()

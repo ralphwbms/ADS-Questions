@@ -1,4 +1,4 @@
-@file:Import("solution.kts")
+@file:Import("RecursiveSolution.kts")
 
 data class TestCase(
     val h1: String,
