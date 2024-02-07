@@ -10,8 +10,8 @@ kotlin -J-ea -script <path-to-file.kts>
 ### On Visual Studio Code
 1. Install the [Code Runner plugin](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 2. Open your user settings.json
-3. Locate the 'code-runner.executorMapByFileExtension' section
-4. Locate the ".kts" configuration and add "-J-ea" right after "kotlinc"
+3. Locate the ```code-runner.executorMapByFileExtension``` section
+4. Locate the ```.kts``` configuration and add ```-J-ea``` right after "kotlinc"
 
 Example:
 ``` json
