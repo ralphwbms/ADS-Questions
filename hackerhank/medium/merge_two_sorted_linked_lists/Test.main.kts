@@ -1,4 +1,4 @@
-@file:Import("RecursiveSolution.kts")
+@file:Import("Solution.kts")
 
 data class TestCase(
     val h1: String,
@@ -49,16 +49,24 @@ fun main() {
             expected = "10 12 23 24 34 87 88 156 157"
         )
     )
-    
+
     testCases.forEach { tc ->
         val h1 = tc.h1.toSinglyLinkedListNode()
         val h2 = tc.h2.toSinglyLinkedListNode()
-        val expected = tc.expected
-        val actual = mergeLists(h1, h2).toString()
 
-        assert(expected == actual)
+        val actualRecursive = RecursiveSolution.mergeLists(h1, h2).toString()
+
+        assert(actualRecursive == tc.expected)
+    }
+
+    testCases.forEach { tc ->
+        val h1 = tc.h1.toSinglyLinkedListNode()
+        val h2 = tc.h2.toSinglyLinkedListNode()
+
+        val actualIterative = IterativeSolution.mergeLists(h1, h2).toString()
+
+        assert(actualIterative == tc.expected)
     }
 }
 
-// install kotlinc and then run: kotlin -J-ea test.main.kts
 main()
