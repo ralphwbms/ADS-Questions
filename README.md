@@ -1,6 +1,6 @@
-# Algo Questions
+# ADS Questions
 
-My solutions for Hackerhank, Algoexpert and Leetcode algo questions.
+My solutions for Hackerhank, Algoexpert and Leetcode ADS questions.
 
 ## Running Kotling scripts
 
