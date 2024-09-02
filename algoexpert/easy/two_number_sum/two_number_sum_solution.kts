@@ -1,4 +1,4 @@
-object Solution {
+object OptimalSolution {
     // O(n) space | O(n) space
     fun twoNumberSum(array: List<Int>, targetSum: Int): List<Int> {
         val numSet = array.toSet()

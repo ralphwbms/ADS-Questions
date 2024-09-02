@@ -1,4 +1,4 @@
-object NaiveSolution {
+object OptimalSolution {
     // O(n) time | O(k) space - where n is the number of matches and k is the number of teams
     fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): String {
         val winPoints = 3
